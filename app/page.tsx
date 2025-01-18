@@ -6,11 +6,6 @@ export default function Home() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <div className="flex-shrink-0">
               <a href="#" title="" className="text-xl font-normal p-2">
-                {/* <img
-                  className="w-auto h-8"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/5/logo.svg"
-                  alt=""
-                /> */}
                 juno
               </a>
             </div>
@@ -70,7 +65,7 @@ export default function Home() {
                 role="button"
               >
                 {" "}
-                sign up for free{" "}
+                get started{" "}
               </a>
             </div>
 
@@ -87,7 +82,7 @@ export default function Home() {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M4 6h16M4 12h16m-7 6h7"
@@ -146,7 +141,7 @@ export default function Home() {
               className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700"
               role="button"
             >
-              sign up for free
+              get started
               <svg
                 className="w-6 h-6 ml-8 -mr-2"
                 xmlns="http://www.w3.org/2000/svg"
