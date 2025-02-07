@@ -13,10 +13,10 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <main>
       <ToggleButton toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} />
       <Content />
-    </div>
+    </main>
   );
 }
