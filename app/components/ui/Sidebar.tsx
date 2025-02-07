@@ -19,7 +19,7 @@ export default function Sidebar({ isOpen }: SidebarProps) {
           <li>
             <Link
               href="#"
-              className="flex items-center p-2  rounded-lg text-white hover:bg-gray-700 group"
+              className="flex items-center p-2  rounded-lg text-white hover:bg-[#181818]"
             >
               <svg
                 className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white"
