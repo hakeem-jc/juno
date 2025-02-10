@@ -1,10 +1,13 @@
 import LoanCalculator from "@/app/components/LoanCalculator";
 
-const Content = () => {
+interface ContentProps {  
+  section: string;
+}
+
+const Content = ({ section }: ContentProps ) => {
   return (
     <section className="p-4 sm:ml-64">
-      {/* TODO - Show / Hide Sections depending on the selection in the sidebar */}
-      <LoanCalculator />
+      {section === 'Loan Calculator' && <LoanCalculator />}
     </section>
   );
 };

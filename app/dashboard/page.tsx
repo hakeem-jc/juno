@@ -7,6 +7,7 @@ import Content from '@/app/components/ui/Content';
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [section, setSection] = useState('Loan Calculator');
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -15,8 +16,8 @@ export default function Home() {
   return (
     <main>
       <ToggleButton toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} />
-      <Content />
+      <Sidebar isOpen={isSidebarOpen} setSection={setSection}/>
+      <Content section={section} />
     </main>
   );
 }
