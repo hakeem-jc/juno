@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main>
       <ToggleButton toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} setSection={setSection}/>
-      <Content section={section} />
+      <Sidebar isOpen={isSidebarOpen} setSection={setSection} toggleSidebar={toggleSidebar} />
+      <Content section={section} isOpen={isSidebarOpen} />
     </main>
   );
 }

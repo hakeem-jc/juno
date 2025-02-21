@@ -1,11 +1,13 @@
 "use client";
+import ToggleButton from '@/app/components/ui/ToggleButton';
 
 interface SidebarProps {
   isOpen: boolean;
   setSection: (section: string) => void;
+  toggleSidebar: () => void;
 }
 
-export default function Sidebar({ isOpen, setSection }: SidebarProps) {
+export default function Sidebar({ isOpen, setSection, toggleSidebar }: SidebarProps) {
   return (
     <aside
       id="default-sidebar"
@@ -15,6 +17,11 @@ export default function Sidebar({ isOpen, setSection }: SidebarProps) {
       aria-label="Sidebar"
     >
       <div className="h-full px-3 py-4 overflow-y-auto bg-[#212121]">
+        <div className="flex items-center justify-between sm:justify-center mb-4 px-3 ">
+          <h1 className="text-2xl font-semibold text-white">juno</h1>
+          <ToggleButton toggleSidebar={toggleSidebar} />
+        </div>
+
         <ul className="space-y-2 font-medium">
           <li
             className="flex items-center p-2  rounded-lg text-white hover:bg-[#181818] cursor-pointer"
