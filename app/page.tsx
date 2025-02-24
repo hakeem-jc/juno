@@ -1,25 +1,23 @@
+'use client';
+
+import { useState } from 'react';
+import ToggleButton from '@/app/components/ui/ToggleButton';
+import Sidebar from '@/app/components/ui/Sidebar';
+import Content from '@/app/components/ui/Content';
+
 export default function Home() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [section, setSection] = useState('Loan Calculator');
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <main>
-      <nav className="bg-[#181818] w-full border-b border-gray-600">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              juno
-            </span>
-          </a>
-        </div>
-      </nav>
-      <section className="p-4 sm:ml-64">
-        <div className="flex items-center justify-center h-[calc(100vh-4rem)]">
-          <h1 className="text-4xl font-semibold text-center text-gray-800 dark:text-gray-100">
-            Welcome to Juno
-          </h1>
-        </div>
-      </section>
+      <ToggleButton toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} setSection={setSection} toggleSidebar={toggleSidebar} />
+      <Content section={section} isOpen={isSidebarOpen} />
     </main>
   );
 }
