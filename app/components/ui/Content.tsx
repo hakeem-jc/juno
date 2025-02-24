@@ -1,4 +1,5 @@
 import LoanCalculator from "@/app/components/LoanCalculator";
+import Overview from "@/app/components/Overview";
 
 interface ContentProps {
   section: string;
@@ -14,9 +15,11 @@ const Content = ({ section, isOpen }: ContentProps) => {
       {/* Content */}
       <section className="p-4 sm:ml-64">
         <nav className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold text-white">{section}</h1>
+          <h1 className="text-3xl font-semibold text-white">{section}</h1>
         </nav>
 
+        {/* Render the appropriate section based on the section state */}
+        {section === "Overview" && <Overview />}
         {section === "Loan Calculator" && <LoanCalculator />}
       </section>
     </section>
