@@ -2,8 +2,8 @@ import CurrencyConverter from '@/app/components/ui/CurrencyConverter';
 
 const Overview = () => {
   return (
-    <section className="flex flex-col gap-6">
-      <div className="max-w-sm min-h-48 p-6 rounded-lg shadow-sm bg-[#212121] flex flex-col justify-between">
+    <section className="flex flex-col md:flex-row gap-6 flex-wrap">
+      <div className="max-w-sm md:w-96 min-h-48 p-6 rounded-lg shadow-sm bg-[#212121] flex flex-col justify-between">
         <div className="flex items-center justify-between mb-4">
           <svg
             className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white"
@@ -25,7 +25,7 @@ const Overview = () => {
         </div>
       </div>
 
-      <div className="max-w-sm min-h-48 p-6 rounded-lg shadow-sm bg-[#212121] flex flex-col justify-between">
+      <div className="max-w-sm md:w-96 min-h-48 p-6 rounded-lg shadow-sm bg-[#212121] flex flex-col justify-between">
         <div className="flex items-center justify-between mb-4">
           <svg
             className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white"

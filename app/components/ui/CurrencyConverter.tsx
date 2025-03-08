@@ -1,8 +1,8 @@
 const CurrencyConverter = () => {
   return (
-    <div className="max-w-sm min-h-48 p-6 rounded-lg shadowm-sm bg-[#212121] flex flex-col justify-between items-center gap-8">
+    <div className="max-w-sm md:w-96 min-h-48 p-6 rounded-lg shadowm-sm bg-[#212121] flex flex-col justify-between items-center gap-8">
       <div className="flex gap-3 w-full">
-        <p className="block">Your Wallet</p>
+        <p className="block">Currency Converter</p>
         <p className="block text-gray-400">Fiat</p>
         <p className="block text-gray-400">Crypto</p>
       </div>
