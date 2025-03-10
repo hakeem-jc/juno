@@ -2,9 +2,10 @@
 
 ---
 
+<!-- To Do - Add Stock Market ticker and Stock analysis page some -->
+
 ## **Phase 0: UI Setup**
 
-- Build Landing Page
 - Build Dashboard
 
 ## **Phase 1: Core MVP Development**
