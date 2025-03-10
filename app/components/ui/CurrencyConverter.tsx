@@ -1,4 +1,18 @@
+"use client";
+import { useForm } from "react-hook-form";
+import Input from "@/app/components/ui/Input";
+
+type FormData = {
+  quoteCurrency: string;
+  baseCurrency: string;
+};
+
 const CurrencyConverter = () => {
+  const {
+    register,
+    formState: { errors },
+    setValue,
+  } = useForm<FormData>();
   return (
     <div className="max-w-sm md:w-96 min-h-48 p-6 rounded-lg shadowm-sm bg-[#212121] flex flex-col justify-between items-center gap-8">
       <div className="flex gap-3 w-full">
@@ -7,33 +21,57 @@ const CurrencyConverter = () => {
         <p className="block text-gray-400">Crypto</p>
       </div>
 
-      <div className="flex w-full justify-between">
+      <form className="flex w-full justify-between items-center">
         <div>
-          <p className="text-sm text-gray-400 mb-2">Quote Currency</p>
-          <input type="number" className="bg-[#181818] text-white" />
+          <Input
+            id="quoteCurrency"
+            label="Quote Currency"
+            type="number"
+            // @ts-ignore
+            register={register}
+            placeholder="0.00"
+          />
         </div>
 
-        <div className="bg-[#181818] p-2 rounded-lg">
-          <select className="bg-[#181818] text-white">
-            <option>JMD</option>
-            <option>EUR</option>
+        <div>
+          <select
+            id="quoteCurrencyOptions"
+            className="text-sm rounded-lg block w-full p-2.5 bg-[#181818] placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option selected value="JMD">
+              JMD
+            </option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
           </select>
         </div>
-      </div>
+      </form>
 
-      <div className="flex w-full justify-between">
+      <form className="flex w-full justify-between items-center">
         <div>
-          <p className="text-sm text-gray-400 mb-2">Base Currency</p>
-          <input type="number" className="bg-[#181818] text-white" />
+          <Input
+            id="baseCurrency"
+            label="Base Currency"
+            type="number"
+            // @ts-ignore
+            register={register}
+            placeholder="0.00"
+          />
         </div>
 
-        <div className="bg-[#181818] p-2 rounded-lg">
-          <select className="bg-[#181818] text-white">
-            <option>EUR</option>
-            <option>JMD</option>
+        <div>
+          <select
+            id="baseCurrencyOptions"
+            className="text-sm rounded-lg block w-full p-2.5 bg-[#181818] placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option selected value="USD">
+              USD
+            </option>
+            <option value="JMD">JMD</option>
+            <option value="EUR">EUR</option>
           </select>
         </div>
-      </div>
+      </form>
 
       <p className="text-gray-400 text-sm">1 JMD = 0.005 EUR</p>
     </div>
