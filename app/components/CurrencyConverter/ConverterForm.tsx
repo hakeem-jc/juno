@@ -51,6 +51,7 @@ const ConverterForm: React.FC = () => {
       className="max-w-sm md:w-96 min-h-48 p-6 rounded-lg shadow-sm bg-[#212121] flex flex-col justify-between"
       onSubmit={handleFormSubmit}
     >
+      <h3 className="text-white text-lg pb-5">Currency Converter</h3>
       <div className="mb-6">
         <label className="block text-white font-medium mb-2">
           Enter Amount
