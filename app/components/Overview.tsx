@@ -1,4 +1,4 @@
-import CurrencyConverter from '@/app/components/ui/CurrencyConverter';  
+import ConverterForm from '@/app/components/CurrencyConverter/ConverterForm';
 
 const Overview = () => {
   return (
@@ -49,7 +49,7 @@ const Overview = () => {
         </div>
       </div>
 
-      <CurrencyConverter />
+      <ConverterForm />
     </section>
   );
 };
